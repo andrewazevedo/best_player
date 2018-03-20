@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <View>
-        <Text>The best React Native Player you've ever seen</Text>
-      </View>
-    );
-  }
-}
+/* Reactotron Config */
+import 'config/reactotron';
 
-export default App
+/* Navigation Routes */
+import Routes from 'routes';
+
+const App = () => <Routes />;
+
+export default App;
