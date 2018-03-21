@@ -3,23 +3,30 @@
 import React, { Component } from 'react';
 import {
   View,
+  ScrollView,
   Text,
-  TouchableOpacity,
 } from 'react-native';
 
-class PlayerList extends Component {
-  render() {
-    const { navigate } = this.props.navigation;
+/* Common styles */
+import { general } from 'styles';
 
+/* Presentational Components */
+import Header from 'components/header';
+
+class PlayerList extends Component {
+  static navigationOptions = {
+    header: <Header title="Players" />,
+  }
+
+  render() {
     return (
-      <View>
-        <Text>PlayerList Screen</Text>
-        <TouchableOpacity onPress={() => navigate('player')}>
-          <Text>Player</Text>
-        </TouchableOpacity>
+      <View style={general.container}>
+        <ScrollView contentContainerStyle={general.contentContainer}>
+          <Text>Item</Text>
+        </ScrollView>
       </View>
     );
   }
-};
+}
 
 export default PlayerList;
