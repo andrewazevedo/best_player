@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import {
   View,
   ScrollView,
-  Text,
 } from 'react-native';
 
 /* Common styles */
@@ -12,6 +11,7 @@ import { general } from 'styles';
 
 /* Presentational Components */
 import Header from 'components/header';
+import Card from 'components/card';
 
 class PlayerList extends Component {
   static navigationOptions = {
@@ -22,7 +22,18 @@ class PlayerList extends Component {
     return (
       <View style={general.container}>
         <ScrollView contentContainerStyle={general.contentContainer}>
-          <Text>Item</Text>
+          <Card
+            photo="https://di07maosdg21o.cloudfront.net/books/books_background/163_chief_customer.site_thumb.jpg?1497471445"
+            title="O ponto da virada"
+            description="bla bla bla bla bla bla"
+            author="Ze ruela"
+          />
+          <Card
+            photo="https://di07maosdg21o.cloudfront.net/books/books_background/163_chief_customer.site_thumb.jpg?1497471445"
+            title="O ponto da virada"
+            description="bla bla bla bla bla bla"
+            author="Ze ruela"
+          />
         </ScrollView>
       </View>
     );
