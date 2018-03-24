@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { metrics, colors } from 'styles';
+import { metrics, colors, fonts } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,16 +11,31 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     shadowRadius: 5,
     elevation: 2,
+    borderRadius: 5,
   },
   imgContainer: {
     height: 150,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    justifyContent: 'flex-end',
   },
   infoContainer: {
-    backgroundColor: colors.lighter,
+    backgroundColor: colors.white,
     padding: 10,
   },
-  descriptionText: {
-    color: colors.white,
+  titleText: {
+    paddingBottom: 5,
+    fontSize: fonts.medium,
+    fontWeight: 'bold',
+    color: colors.black,
+  },
+  taglineText: {
+    paddingBottom: 5,
+    color: colors.black,
+  },
+  authorText: {
+    fontStyle: 'italic',
+    color: colors.grey,
   },
 });
 

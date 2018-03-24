@@ -13,27 +13,30 @@ import { general } from 'styles';
 import Header from 'components/header';
 import Card from 'components/card';
 
+import data from 'services/data';
+
 class PlayerList extends Component {
   static navigationOptions = {
-    header: <Header title="Players" />,
-  }
+    header: <Header title="BOOKS" />,
+  };
+
+  renderCards = () => (
+    data.map(item => (
+      <Card
+        key={item.id}
+        photo={item.medium_image_url}
+        title={item.title}
+        tagline={item.tagline}
+        author={item.author}
+      />
+    ))
+  )
 
   render() {
     return (
       <View style={general.container}>
         <ScrollView contentContainerStyle={general.contentContainer}>
-          <Card
-            photo="https://di07maosdg21o.cloudfront.net/books/books_background/163_chief_customer.site_thumb.jpg?1497471445"
-            title="O ponto da virada"
-            description="bla bla bla bla bla bla"
-            author="Ze ruela"
-          />
-          <Card
-            photo="https://di07maosdg21o.cloudfront.net/books/books_background/163_chief_customer.site_thumb.jpg?1497471445"
-            title="O ponto da virada"
-            description="bla bla bla bla bla bla"
-            author="Ze ruela"
-          />
+          {this.renderCards()}
         </ScrollView>
       </View>
     );
