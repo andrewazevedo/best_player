@@ -6,8 +6,10 @@ export default {
   dark: '#666',
   darker: '#333',
   black: '#000',
+  grey: '#808080',
 
-  background: '#F5F5F5',
+  background: '#FFF',
+  backgroundHeader: '#87CEFA',
   success: '#9DCA83',
   danger: '#E37A7A',
 };

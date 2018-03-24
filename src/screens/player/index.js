@@ -5,19 +5,13 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 
 class Player extends Component {
   render() {
-    const { goBack } = this.props.navigation;
-
     return (
-      <View>
-        <Text>Player Screen</Text>
-        <TouchableOpacity onPress={() => goBack()}>
-          <Text>GO BACK</Text>
-        </TouchableOpacity>
-      </View>
+      <View />
     );
   }
 };

@@ -8,11 +8,18 @@ const styles = StyleSheet.create({
     height: metrics.headerHeight,
     width: metrics.screeWidth,
     paddingTop: metrics.statusBarHeight,
-    backgroundColor: colors.white,
+    backgroundColor: colors.backgroundHeader,
+
+    shadowColor: colors.black,
+    shadowOffset: { width: 2, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
   },
   headerTitle: {
-    fontSize: fonts.big,
-    color: colors.dark,
+    fontSize: fonts.medium,
+    letterSpacing: 0.5,
+    fontWeight: 'bold',
+    color: colors.white,
   },
 });
 
