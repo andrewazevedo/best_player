@@ -3,7 +3,7 @@ import { metrics, fonts, colors } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
     height: metrics.headerHeight,
     width: metrics.screeWidth,
@@ -20,6 +20,10 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     fontWeight: 'bold',
     color: colors.white,
+  },
+  icon: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
   },
 });
 

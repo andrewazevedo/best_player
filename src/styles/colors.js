@@ -9,7 +9,7 @@ export default {
   grey: '#808080',
 
   background: '#FFF',
-  backgroundHeader: '#87CEFA',
+  backgroundHeader: '#48D1CC',
   success: '#9DCA83',
   danger: '#E37A7A',
 };

@@ -5,12 +5,13 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Slider from 'react-native-slider';
 import Video from 'react-native-video';
 import Icon from 'react-native-vector-icons/Foundation';
+
+import Header from 'components/header';
 
 import data from 'services/data';
 
@@ -27,11 +28,19 @@ class Player extends Component {
     }).isRequired,
   }
 
+  static navigationOptions = {
+    header: props => (
+      <Header
+        title="PLAYER"
+        goBack
+        {...props}
+      />
+    ),
+  }
+
   state = {
     cardData: [],
     playing: true,
-    muted: false,
-    shuffle: false,
     sliding: false,
     currentTime: 0,
   }

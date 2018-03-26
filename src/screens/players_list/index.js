@@ -18,7 +18,7 @@ import data from 'services/data';
 
 class PlayerList extends Component {
   static navigationOptions = {
-    header: <Header title="BOOKS" />,
+    header: props => <Header {...props} title="AUDIOBOOKS" />,
   };
 
   static propTypes = {
