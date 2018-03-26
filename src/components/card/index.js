@@ -10,10 +10,12 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 const Card = ({
+  id,
   photo,
   title,
   tagline,
   author,
+  onCardPress,
 }) => {
   const {
     container,
@@ -25,7 +27,7 @@ const Card = ({
   } = styles;
 
   return (
-    <TouchableOpacity style={container}>
+    <TouchableOpacity onPress={() => onCardPress(id)} style={container}>
       <Image
         style={imgContainer}
         source={{ uri: photo }}
@@ -42,10 +44,12 @@ const Card = ({
 };
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   photo: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  onCardPress: PropTypes.func.isRequired,
 };
 
 export default Card;
